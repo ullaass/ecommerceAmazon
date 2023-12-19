@@ -9,10 +9,11 @@ const Carousel = () => {
   return (
     <div className='h-[350px] bg-white'>
         <Swiper
+          modules={[Navigation, Autoplay]}
           loop={true}
           spaceBetween={0}
           navigation={true}
-          modules={[Navigation, Autoplay]}
+          
           autoplay={{
             delay:4500
           }}
