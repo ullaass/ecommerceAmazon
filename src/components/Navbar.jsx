@@ -1,12 +1,13 @@
 import React from 'react'
 import { ShoppingCartIcon} from "@heroicons/react/24/outline"
 import Search from './Search'
+import { Link } from 'react-router-dom'
 const Navbar = () => {
   return (
     <header className='min-w-[100px]'>
         <div className='flex  bg-amazonclone text-white h-[60px]'>
             <div className='flex items-center m-4'>
-                <img className='h-[30px] w-[80px] m-2' src='../images/amazon.png' />
+                <Link to={"/"}> <img className='h-[30px] w-[80px] m-2' src='../images/amazon.png' /></Link>
                 <div className='pr-4 pl-4'>
                     <div className='text-xs xl:text-sm'>Deliever</div>
                     <div className='text-xs xl:text-base'>To India</div>
@@ -24,10 +25,12 @@ const Navbar = () => {
                     <div className='text-xs xl:text-sm'>Returns</div>
                     <div className='text-xs xl:text-base'>& Orders</div>
                 </div>
+                <Link to={"/checkout"}>
                 <div className='flex pl-3 pr-3'>
                     <ShoppingCartIcon className='h-[40px]' />
                     <div className='mt-7 text-xs xl:text-sm font-bold '>Cart</div>
                 </div>
+               </Link>
             </div>
         </div>
         <div className='flex bg-amazonclone-light_blue text-white space-x-3 text-xs xl:text-sm p-2 pl-6'>
